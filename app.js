@@ -120,13 +120,14 @@ function handleInput()
 {
     const q = input.value.trim();
 
-    if (!q)
+    /*if (!q)
     { 
         dd.hidden = true; 
         result.classList.add('muted'); 
         result.textContent = 'Ничего не выбрано'; 
         return; 
     }
+        */
 
     const items = searchLocal(q, 5);
     renderDropdown(items, q);
@@ -200,12 +201,9 @@ btn.addEventListener('click', fetchData);
 
 
 //--------------------
+const resultcard = document.getElementById('result-card');
 const result = document.getElementById('result');
-
-function clearResult(){
-  result.hidden = true;
-  result.innerHTML = "";
-}
+const loading = document.getElementById('loading');
 
 function renderKV(k, v){
   const row = document.createElement("div");
@@ -235,7 +233,6 @@ const el = {
 };
 
 function renderStock(stock){
-
   el.resultName.textContent = stock.name;
   el.resultTicker.textContent = stock.ticker;
   el.resultISIN.textContent = stock.isin;
@@ -243,17 +240,9 @@ function renderStock(stock){
   el.resultLastPrice.textContent = formatMoney(stock.lastPrice);
   el.resultSharesOutstanding.textContent = formatNumber(stock.sharesOutstanding);
   el.resultMarketCapitalization.textContent = formatMoney(stock.marketCapitalization);
-  /*clearResult();
-  const frag = document.createDocumentFragment();
-  frag.appendChild(renderKV("Тикер", stock.ticker));
-  frag.appendChild(renderKV("Название", stock.name));
-  frag.appendChild(renderKV("ISIN", stock.isin));
-  frag.appendChild(renderKV("Текущая цена", formatMoney(stock.lastPrice)));
-  frag.appendChild(renderKV("Акций в обращении", formatNumber(stock.sharesOutstanding)));
-  frag.appendChild(renderKV("Капитализация", formatMoney(stock.marketCapitalization)));
-  result.appendChild(frag);
+
+  loading.hidden = true;
   result.hidden = false;
-  */
 }
 
 function formatNumber(x){
@@ -307,6 +296,11 @@ async function fetchData(){
     //clearResult();ы
     return;
   }
+  
+  result.hidden = true;
+  loading.hidden = false;
+  resultcard.hidden = false;
+ 
 
   //setLoading(true);
   //setError(""); // очистим статус

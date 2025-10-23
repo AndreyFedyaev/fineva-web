@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FinEva</title>
-  <link rel="stylesheet" href="./styles.css?v=0007" />
+  <link rel="stylesheet" href="./styles.css?v=0008" />
 </head>
 <body>
   <main class="container">
@@ -21,8 +21,9 @@
       </div>
     </section>
 
-    <section class="card2">
-      <div id="result" class="result" >
+    <section class="card2" id="result-card" hidden>
+      <h2 id="loading">Загрузка данных..</h2>
+      <div class="result" id="result" hidden>
         <div class="result-box">
           <h1>Название</h1>
           <p id="result-name"></p>
@@ -51,6 +52,6 @@
     </section>
   </main>
 
-  <script defer src="./app.js?v=0007"></script>
+  <script defer src="./app.js?v=0008"></script>
 </body>
 </html>
