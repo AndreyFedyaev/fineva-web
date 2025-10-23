@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FinEva</title>
+  <link rel="stylesheet" href="./styles.css?v=0002" />
+</head>
+<body>
+  <main class="container">
+   
+    <section class="card">
+      <div class="search">
+        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="2"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"></line>
+        </svg>
+        <input id="q" class="input" placeholder="Тикер • Название • ISIN" autocomplete="off" />
+        <button id="go" class="btn" type="button" title="Найти">Найти</button>
+        <div id="dd" class="dropdown" hidden></div>
+      </div>
+    </section>
+
+    <section class="card2">
+      <div id="result" class="result" hidden></div>
+    </section>
+  </main>
+
+  <script src="./app.js?v=0001"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Live Server (Firefox)",
+      "type": "firefox",
+      "request": "launch",
+      "url": "http://127.0.0.1:5500/index.html",   // <-- подставь свой адрес/порт
+      "webRoot": "${workspaceFolder}",             // <-- папка, где index.html и app.js
+      "reAttach": true
+    }
+  ]
+}
