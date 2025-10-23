@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FinEva</title>
-  <link rel="stylesheet" href="./styles.css?v=0002" />
+  <link rel="stylesheet" href="./styles.css?v=0007" />
 </head>
 <body>
   <main class="container">
@@ -22,10 +22,35 @@
     </section>
 
     <section class="card2">
-      <div id="result" class="result" hidden></div>
+      <div id="result" class="result" >
+        <div class="result-box">
+          <h1>Название</h1>
+          <p id="result-name"></p>
+        </div>
+        <div class="result-box">
+          <h1>Тикер</h1>
+          <p id="result-ticker"></p>
+        </div>
+        <div class="result-box">
+          <h1>ISIN</h1>
+          <p id="result-isin"></p>
+        </div>
+        <div class="result-box">
+          <h1>Текущая цена</h1>
+          <p id="result-lastprice"></p>
+        </div>
+        <div class="result-box">
+          <h1>Акций в обращении</h1>
+          <p id="result-sharesOutstanding"></p>
+        </div>
+        <div class="result-box">
+          <h1>Капитализация</h1>
+          <p id="result-marketCapitalization"></p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <script src="./app.js?v=0001"></script>
+  <script defer src="./app.js?v=0007"></script>
 </body>
 </html>

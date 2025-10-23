@@ -224,8 +224,26 @@ function renderKV(k, v){
   return row;
 }
 
+
+const el = {
+  resultName: document.querySelector('#result-name'),
+  resultTicker: document.querySelector('#result-ticker'),
+  resultISIN: document.querySelector('#result-isin'),
+  resultLastPrice: document.querySelector('#result-lastprice'),
+  resultSharesOutstanding: document.querySelector('#result-sharesOutstanding'),
+  resultMarketCapitalization: document.querySelector('#result-marketCapitalization'),
+};
+
 function renderStock(stock){
-  clearResult();
+
+  el.resultName.textContent = stock.name;
+  el.resultTicker.textContent = stock.ticker;
+  el.resultISIN.textContent = stock.isin;
+
+  el.resultLastPrice.textContent = formatMoney(stock.lastPrice);
+  el.resultSharesOutstanding.textContent = formatNumber(stock.sharesOutstanding);
+  el.resultMarketCapitalization.textContent = formatMoney(stock.marketCapitalization);
+  /*clearResult();
   const frag = document.createDocumentFragment();
   frag.appendChild(renderKV("Тикер", stock.ticker));
   frag.appendChild(renderKV("Название", stock.name));
@@ -235,6 +253,7 @@ function renderStock(stock){
   frag.appendChild(renderKV("Капитализация", formatMoney(stock.marketCapitalization)));
   result.appendChild(frag);
   result.hidden = false;
+  */
 }
 
 function formatNumber(x){
