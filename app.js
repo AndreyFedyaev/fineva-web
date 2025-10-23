@@ -113,6 +113,8 @@ function selectItem(idx)
     dd.hidden = true; input.blur();
     selectedTicker = a.t;
     q.value = `${a.n} (${a.t})` ;
+
+    fetchData();
 }
 
 // Обработка ввода
