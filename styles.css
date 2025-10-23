@@ -67,6 +67,7 @@
 .card  { z-index: 2; }                /* верхняя */
 .card2 { 
   z-index: 1; 
+  margin-bottom: 50px;
  /* display: none;*/
 }                /* нижняя */
 
