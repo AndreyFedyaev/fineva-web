@@ -4,6 +4,7 @@
     --bg-img: url("images/background.jpg"); /* замени на свой фон */
     --glass: rgba(255,255,255,.12);
     --glass-strong: rgba(255, 255, 255, 0.274);
+    --glass-strong-hover: rgba(204, 204, 204, 0.274);
     --stroke: rgba(255,255,255,.35);
     --text: #ffffff;
     --muted: rgba(0, 0, 0, 0.747);
@@ -192,6 +193,7 @@ mark.em{
   gap: 20px;
   padding: 10px;
 }
+
 .result-box{
   display: flex;
   flex-direction: column;
@@ -202,6 +204,10 @@ mark.em{
   border: 1px solid var(--stroke);
   border-radius: 10px;
   background: var(--glass-strong);
+}
+
+.result-box:hover{
+  background: var(--glass-strong-hover);
 }
 
 h1{
