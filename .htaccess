@@ -1,0 +1,21 @@
+# Включаем mod_rewrite (если не включен)
+RewriteEngine On
+
+# Редирект с HTTP на HTTPS
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Отключаем агрессивное кэширование JS, JSON и HTML
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|htm|js|mjs|json)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+  </FilesMatch>
+</IfModule>
+
+# Корректные MIME-типы для JS, JSON и шрифтов
+AddType text/javascript .js
+AddType application/json .json
+AddType font/woff2 .woff2
+AddType text/css .css

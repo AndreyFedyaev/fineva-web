@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FinEva</title>
+  <link rel="stylesheet" href="./styles.css?v=0017" />
+
+  <!-- Общий favicon -->
+  <link rel="icon" href="/images/icon.png?v=0017" type="image/png">
+  <!-- Для iPhone и iPad -->
+  <link rel="apple-touch-icon" href="/images/icon.png?v=0017">
+  <!-- Для Android и PWA -->
+  <link rel="manifest" href="/manifest.json?v=0017">
+  <!-- Цвет фона при запуске сайта как приложения -->
+  <meta name="theme-color" content="#0b1320">
+</head>
+<body>
+  <main class="container">
+   
+    <section class="card">
+      <div class="search">
+        <svg class="icon" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="2"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="2"></line>
+        </svg>
+        <input id="q" class="input" placeholder="Тикер • Название • ISIN" autocomplete="off" />
+        <button id="go" class="btn" type="button" title="Найти">Найти</button>
+        <div id="dd" class="dropdown" hidden></div>
+      </div>
+    </section>
+
+    <section class="card2" id="result-card" hidden>
+      <h2 id="loading">Загрузка данных..</h2>
+      <div class="result" id="result" hidden>
+        <div class="result-box">
+          <h1>Название</h1>
+          <p id="result-name"></p>
+        </div>
+        <div class="result-box">
+          <h1>Тикер</h1>
+          <p id="result-ticker"></p>
+        </div>
+        <div class="result-box">
+          <h1>ISIN</h1>
+          <p id="result-isin"></p>
+        </div>
+        <div class="result-box">
+          <h1>Текущая цена</h1>
+          <p id="result-lastprice"></p>
+        </div>
+        <div class="result-box">
+          <h1>Акций в обращении</h1>
+          <p id="result-sharesOutstanding"></p>
+        </div>
+        <div class="result-box">
+          <h1>Капитализация</h1>
+          <p id="result-marketCapitalization"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script defer src="./app.js?v=0017"></script>
+</body>
+</html>

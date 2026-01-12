@@ -1,0 +1,15 @@
+{
+  "name": "FinEva",
+  "short_name": "FinEva",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0b1320",
+  "theme_color": "#0b1320",
+  "icons": [
+    {
+      "src": "/images/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
