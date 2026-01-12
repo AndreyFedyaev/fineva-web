@@ -22,27 +22,6 @@ body{
   box-shadow: 3px 3px 8px 0px var(--bs-black-03), -3px -3px 8px 0px var(--bs-white-08);
 }
 
-/* .page {
-  min-height: 100vh;
-  background: var(--bg-main);
-  color: var(--text-primary);
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 50px 16px;
-}
-
-.section {
-  margin-bottom: 32px;
-  padding: 24px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
-} */
-
-
 .column {
   display: flex;
   flex-direction: column;
@@ -50,7 +29,6 @@ body{
   align-items: center;
   gap: 12px;
 } 
-
 
 .row {
   display: flex;

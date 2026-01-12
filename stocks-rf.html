@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles/components/header.css?v=0020">
   <link rel="stylesheet" href="styles/components/button.css?v=0020">
   <link rel="stylesheet" href="styles/components/input.css?v=0020"> 
+  <link rel="stylesheet" href="styles/components/results.css?v=0020">
   
   <!-- Общий favicon -->
   <link rel="icon" href="/images/icon.png?v=0017" type="image/png">
@@ -47,9 +48,23 @@
         <input id="stocks-search" class="input" placeholder="Название | Тикер | ISIN">
         <button class="button">Найти</button>
       </div>
+
+      <div class="results" id="stocks-results">
+        <div class="results-table">
+          <div class="results-head">
+            <div>Тикер</div>
+            <div>Название</div>
+            <div>ISIN</div>
+          </div>
+          <div class="results-body" id="stocks-results-body">
+            <!-- сюда JS будет вставлять строки -->
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <script defer src="./app.js?v=0017"></script>
+  <script defer src="/js/app.js?v=0017"></script>
+  <script defer src="/js/stocks.js?v=0017"></script>
 </body>
 </html>
