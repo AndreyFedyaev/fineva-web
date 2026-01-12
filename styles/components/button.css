@@ -1,0 +1,20 @@
+.button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+
+  background: var(--button);
+  color: var(--text-inverse);
+
+  box-shadow: 3px 3px 8px 0px var(--bs-black-03), -3px -3px 8px 0px var(--bs-white-08);
+
+  cursor: pointer;
+}
+
+.button:hover{
+  background: var(--button-hover);
+}
+
+.button:active{
+  box-shadow: 3px 3px 5px 0px var(--bs-black-03) inset;
+}

@@ -1,0 +1,58 @@
+:root[data-theme="theme1"] {
+
+  /* Палитра */
+  --c-white:#FFFFFF;
+  --c-black:#000000;
+
+  --c-blue-1:#E4ECF1;
+  --c-blue-2:#D7E3EA;
+  --c-blue-3:#92B0C8;
+  --c-blue-4:#527EA3;
+  --c-blue-5:#446988;
+  --c-blue-6:#37546D;
+  --c-blue-7:#223544;
+  --c-blue-8:#152029;
+
+  --c-green:#085b17;
+  --c-yellow:#ccd311; 
+  --c-orange:#BC7524;
+  --c-red:#830a0a;
+
+  --c-notused:#000000;
+
+  /* Фоны (уровни поверхности) */
+  --bg-1: var(--c-blue-1);           /* фон страницы 1 */
+  --bg-2: var(--c-blue-2);           /* фон страницы 2 */
+  --bg-surface: var(--c-notused);     /* карточки, панели, контейнеры */
+  --bg-control: var(--c-notused);    /* input, select, textarea */
+
+  /* Текст  */
+  --text: var(--c-black);             /* текст основной */
+  --text-muted: rgb(0, 0, 0, 0.4);  /* текст приглушенный */
+  --text-inverse: var(--c-blue-1);   /* текст инверсный */
+  --text-selected: var(--c-blue-6);             /* текст основной */
+  --text-hover: var(--c-notused);     /* текст при наведении (когда вместо кнопок) */
+  --text-active: var(--c-notused);    /* текст активный (когда вмето кнопок) */
+ 
+  /* Кнопки  */
+  --button: var(--c-blue-6);         /* кнопка основная */
+  --button-muted: var(--c-notused);   /* кнопка приглушенная */
+  --button-hover: var(--c-blue-5);   /* кнопка при наведении */
+  --button-active: var(--c-notused);  /* кнопка активная */
+
+  /* Границы и разделители */
+  --border-color: var(--c-blue-4);   /* рамка основная */
+  --border-muted: var(--c-blue-4);   /* рамка приглушенная */
+  --border-hover: var(--c-notused);  /* рамка при наведении */
+
+  /* Тень */
+  --bs-black-03:rgb(0, 0, 0, 0.3);         /* тень тёмная opacity 30% */                           
+  --bs-white-08:rgb(255 255 255 / 0.8);    /* тень светлая opacity 30% */  
+
+  /* Состояния */
+  --success: var(--c-green);            /* успех */
+  --warning: var(--c-yellow);           /* предупреждение */
+  --danger: var(--c-red);               /* ошибка / удаление */
+
+}
+
