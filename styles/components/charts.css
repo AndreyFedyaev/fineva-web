@@ -1,0 +1,42 @@
+/* Корневой контейнер графика */
+.chart {
+  background: transparent;
+}
+
+/* SVG */
+.chart svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Оси */
+.chart .axis {
+  stroke: #161414;
+  stroke-width: 2;
+}
+
+/* Подписи шкал */
+.chart .axis-text {
+  fill: #574ecf;
+  font-size: 12px;
+  user-select: none;
+}
+
+/* Линия графика */
+.chart .line {
+  fill: none;
+  stroke: #0a5cff;
+  stroke-width: 3;
+
+    /* 🔹 сглаживание углов */
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+/* Наведение (на будущее) */
+.chart .line:hover {
+  stroke-width: 5;
+}
+
+

@@ -8,6 +8,8 @@ function activeTheme1() {
 activeTheme1();
 
 
+const charttestdata = [100, 102, 101, 104, 107, 106, 110];
+renderLineChart(document.querySelector("#testchart"), charttestdata);
 
 
 
